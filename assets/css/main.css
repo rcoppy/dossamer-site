@@ -1232,8 +1232,9 @@ body, input, select, textarea {
 
 a {
   color: #5AA6ED;
-  text-decoration: underline; }
+  text-decoration: none; }
   a:hover {
+    color: #1674cb;
     text-decoration: none; }
 
 strong, b {

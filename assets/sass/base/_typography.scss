@@ -32,9 +32,10 @@
 
 	a {
 		color: _palette(accent1, bg);
-		text-decoration: underline;
+		text-decoration: none;
 
 		&:hover {
+			color: darken(_palette(accent1, bg), 20%);
 			text-decoration: none;
 		}
 	}
