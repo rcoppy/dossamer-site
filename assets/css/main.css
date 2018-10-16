@@ -1869,17 +1869,30 @@ button,
 
 /* Header */
 #header {
+  -moz-transition: background 0.5s ease, visibility 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: background 0.5s ease, visibility 0.5s ease, opacity 0.5s ease;
+  -ms-transition: background 0.5s ease, visibility 0.5s ease, opacity 0.5s ease;
+  transition: background 0.5s ease, visibility 0.5s ease, opacity 0.5s ease;
+  visibility: hidden;
+  opacity: 0;
   background: #3b3b3b;
   color: #d6d6d6;
   cursor: default;
   height: 3.25em;
   left: 0;
   line-height: 3.25em;
-  position: fixed;
-  text-align: right;
+  position: static;
+  text-align: center;
   top: 0;
   width: 100%;
   z-index: 10001; }
+  #header.scrolling {
+    position: fixed;
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    background: #797979; }
   #header > h1 {
     color: #ffffff;
     display: inline-block;
