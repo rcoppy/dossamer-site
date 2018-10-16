@@ -41,21 +41,47 @@
 		width: 100%;
 		z-index: _misc(z-index-base) + 1;
 
-		> h1 {
-			color: _palette(accent2, fg-bold);
+		> span {
 			display: inline-block;
 			height: inherit;
 			left: 1.25em;
-			line-height: inherit;
+
 			margin: 0;
 			padding: 0;
 			position: absolute;
 			top: 0;
 
-			a {
+			img {
+				@include vendor('filter', 'invert(100%)');
+				position: relative;
+				height: 80%;
+				top: 10%;
+				display: inline-block;
+			}
+
+			h1 {
+				
+				@include breakpoint(xsmall) {
+					display: none;
+				}
+
+				color: _palette(accent2, fg-bold);
+				height: 80%;
+				position: relative;
+				top: -15%;
+				left: 4px;
+				display: inline-block;
+				line-height: inherit;
+
 				font-size: 1.25em;
+
+				a {
+					font-size: 1.25em;
+				}
+
 			}
 		}
+		
 
 		> a {
 			@include vendor('transition', 'color #{_duration(transition)} ease-in-out');

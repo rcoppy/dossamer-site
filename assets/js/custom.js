@@ -8,8 +8,6 @@ $(document).ready(function() {
 
     	var yoffset = $(document).scrollTop();
 
-    	console.log(yoffset + ", " + $banner.outerHeight());
-
     	if (yoffset >= $banner.outerHeight()) {
     		$header.addClass('scrolling');
     	}

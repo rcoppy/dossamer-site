@@ -1893,18 +1893,37 @@ button,
     left: 0;
     top: 0;
     background: #797979; }
-  #header > h1 {
-    color: #ffffff;
+  #header > span {
     display: inline-block;
     height: inherit;
     left: 1.25em;
-    line-height: inherit;
     margin: 0;
     padding: 0;
     position: absolute;
     top: 0; }
-    #header > h1 a {
+    #header > span img {
+      -moz-filter: invert(100%);
+      -webkit-filter: invert(100%);
+      -ms-filter: invert(100%);
+      filter: invert(100%);
+      position: relative;
+      height: 80%;
+      top: 10%;
+      display: inline-block; }
+    #header > span h1 {
+      color: #ffffff;
+      height: 80%;
+      position: relative;
+      top: -15%;
+      left: 4px;
+      display: inline-block;
+      line-height: inherit;
       font-size: 1.25em; }
+      @media screen and (max-width: 480px) {
+        #header > span h1 {
+          display: none; } }
+      #header > span h1 a {
+        font-size: 1.25em; }
   #header > a {
     -moz-transition: color 0.2s ease-in-out;
     -webkit-transition: color 0.2s ease-in-out;
@@ -2058,6 +2077,21 @@ button,
   #banner p {
     font-size: 1.5em;
     margin-bottom: 1.75em; }
+  #banner span {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto 0;
+    max-width: 50%; }
+    @media screen and (max-width: 736px) {
+      #banner span {
+        max-width: 100%; } }
+    #banner span a {
+      font-size: 1.5em;
+      border-radius: 5%;
+      background: #e37682;
+      padding: 0.5em;
+      width: 100%;
+      margin: 0.5em; }
   @media screen and (max-width: 1680px) {
     #banner {
       padding: 7em 0 5em 0; } }
