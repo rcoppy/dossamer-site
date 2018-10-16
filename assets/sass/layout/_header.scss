@@ -41,6 +41,10 @@
 		width: 100%;
 		z-index: _misc(z-index-base) + 1;
 
+		@include breakpoint(small) {
+			text-align: right;
+		}
+
 		> span {
 			display: inline-block;
 			height: inherit;
@@ -61,9 +65,9 @@
 
 			h1 {
 				
-				@include breakpoint(xsmall) {
+				/*@include breakpoint(xsmall) {
 					display: none;
-				}
+				}*/
 
 				color: _palette(accent2, fg-bold);
 				height: 80%;
@@ -101,10 +105,12 @@
 				&:before {
 					margin: 0 0.5em 0 0;
 				}
+
+				display: none; // don't show the hamburger on wide displays, just phones
 			}
 
 			& + a[href="#nav"]:last-child {
-				border-left: solid 1px _palette(accent2, border);
+				// border-left: solid 1px _palette(accent2, border);
 				padding-left: 1.25em;
 				margin-left: 0.5em;
 			}
@@ -114,6 +120,15 @@
 			}
 
 			@include breakpoint(small) {
+				
+				&:not([href="#nav"]) {
+					display: none; // hide the header links in phone view
+				}
+
+				&[href="#nav"] {
+					display: inline-block; // show the menu hamburger
+				}
+
 				padding: 0 0.5em;
 
 				& + a[href="#nav"]:last-child {
