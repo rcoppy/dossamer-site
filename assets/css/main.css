@@ -2155,13 +2155,16 @@ button,
     display: flex;
     justify-content: space-around;
     margin: 0 auto 1em;
-    max-width: 40%; }
-    @media screen and (max-width: 736px) {
-      #banner span {
-        max-width: 100%; } }
+    max-width: 20%; }
     @media screen and (max-width: 1680px) {
       #banner span {
         max-width: 20%; } }
+    @media screen and (max-width: 1280px) {
+      #banner span {
+        max-width: 40%; } }
+    @media screen and (max-width: 736px) {
+      #banner span {
+        max-width: 100%; } }
     #banner span a.button {
       display: inline-block;
       width: 50%;

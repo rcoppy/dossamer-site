@@ -37,15 +37,21 @@
 
 			margin: 0 auto 1em;
 
-			max-width: 40%;
+			max-width: 20%;
+
+			@include breakpoint(xlarge) {
+				max-width: 20%;
+			}
+
+			@include breakpoint(large) {
+				max-width: 40%;
+			}
 
 			@include breakpoint(small) {
 				max-width: 100%;
 			}
 
-			@include breakpoint(xlarge) {
-				max-width: 20%;
-			}
+
 
 			a.button {
 				display: inline-block;
