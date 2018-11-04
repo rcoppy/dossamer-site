@@ -1,0 +1,9 @@
+.vertically-centered {
+	/*
+	Only works if parent div has a fixed height. 
+	
+	position: relative;
+	@include vendor('transform', 'translate(0px, -50%)');
+	border: 1px solid #AA0000;
+	top: 50%;*/
+}

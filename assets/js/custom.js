@@ -1,8 +1,8 @@
 $(document).ready(function() {
     // all custom jQuery will go here
 
-    $banner = $('#banner'); 
-    $header = $('#header');
+    var $banner = $('#banner'); 
+    var $header = $('#header');
 
     $(window).scroll(function () {
 
@@ -18,6 +18,22 @@ $(document).ready(function() {
 
     });
 
-	$('.your-class').slick();
+	$('.slider').slick({
+	    autoplay: true,
+	    dots: true,
+	    arrows: true,
+	    responsive: [{ 
+	        breakpoint: 500,
+	        settings: {
+	            dots: false,
+	            arrows: false,
+	            infinite: false,
+	            slidesToShow: 2,
+	            slidesToScroll: 2
+	        } 
+	    }]
+	});
+
+	
 	
 });

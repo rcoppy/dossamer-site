@@ -1272,6 +1272,10 @@ h5 {
 h6 {
   font-size: 0.7em; }
 
+h3, h4, h5, h6 {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: bold; }
+
 sub {
   font-size: 0.8em;
   position: relative;
@@ -1867,6 +1871,63 @@ button,
     line-height: 2.75em;
     text-align: center; }
 
+.slider {
+  width: auto;
+  margin: 30px 50px 50px; }
+
+.slick-slide {
+  background: #3a8999;
+  color: white;
+  padding: 40px 0;
+  font-size: 30px;
+  font-family: "Arial", "Helvetica";
+  text-align: center; }
+
+.slick-prev:before,
+.slick-next:before {
+  color: red !important; }
+
+.slick-dots {
+  bottom: -30px; }
+
+.slick-slide:nth-child(odd) {
+  background: #e84a69; }
+
+.tile {
+  border-radius: 12px;
+  border-width: 1px;
+  border-color: #cccccc;
+  border-style: solid;
+  padding: 0 0 0.5em 0;
+  overflow: hidden;
+  margin-bottom: 2em; }
+  .tile > .image.fit {
+    margin-bottom: 0.5em; }
+    .tile > .image.fit img {
+      border-radius: 0;
+      border-bottom: 1px solid #cccccc; }
+  .tile > p {
+    padding-left: 1em;
+    margin-bottom: 0; }
+
+.display-grid {
+  padding: 0 1em 0 1em; }
+
+.twitter-feed {
+  border-left: 1px solid #cccccc; }
+  @media screen and (max-width: 980px) {
+    .twitter-feed {
+      clear: none; } }
+
+.vertically-centered {
+  /*
+  Only works if parent div has a fixed height. 
+  
+  position: relative;
+  @include vendor('transform', 'translate(0px, -50%)');
+  border: 1px solid #AA0000;
+  top: 50%;*/ }
+
 /* Header */
 #header {
   -moz-transition: background 0.5s ease, visibility 0.5s ease, opacity 0.5s ease;
@@ -2076,6 +2137,11 @@ button,
   padding: 8em 0 6em 0;
   background: #f6f6f6;
   text-align: center; }
+  #banner img.logo {
+    width: 10%;
+    height: auto;
+    position: relative;
+    left: -10px; }
   #banner h2 {
     font-size: 4em;
     line-height: 1em;
@@ -2083,21 +2149,22 @@ button,
     padding: 0; }
   #banner p {
     font-size: 1.5em;
-    margin-bottom: 1.75em; }
+    margin-bottom: 0.25em; }
   #banner span {
+    display: inline-block;
     display: flex;
     justify-content: space-around;
-    margin: 0 auto 0;
-    max-width: 50%; }
+    margin: 0 auto 1em;
+    max-width: 40%; }
     @media screen and (max-width: 736px) {
       #banner span {
         max-width: 100%; } }
-    #banner span a {
-      font-size: 1.5em;
-      border-radius: 5%;
-      background: #e37682;
-      padding: 0.5em;
-      width: 100%;
+    @media screen and (max-width: 1680px) {
+      #banner span {
+        max-width: 20%; } }
+    #banner span a.button {
+      display: inline-block;
+      width: 50%;
       margin: 0.5em; }
   @media screen and (max-width: 1680px) {
     #banner {
@@ -2156,5 +2223,11 @@ button,
         border-left: 0;
         margin-left: 0;
         padding-left: 0; } }
+
+.main-container {
+  padding-right: 1em; }
+  @media screen and (max-width: 736px) {
+    .main-container {
+      padding-right: 0em; } }
 
 /*# sourceMappingURL=main.css.map */

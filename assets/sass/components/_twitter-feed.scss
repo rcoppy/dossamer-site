@@ -1,0 +1,7 @@
+.twitter-feed {
+	border-left: _size(border-width) solid darken(_palette(bg), 20%);
+
+	@include breakpoint(medium) {
+		clear: none;
+	}
+}

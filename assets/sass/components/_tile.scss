@@ -1,0 +1,26 @@
+.tile {
+	border-radius: 3 * _size(border-radius);
+	border-width: _size(border-width);
+	border-color: darken(_palette(bg), 20%);
+	border-style: solid;
+
+	// background-color: _palette(fg-light);
+
+	padding: 0 0 0.5em 0;
+	overflow: hidden;
+
+	margin-bottom: _size(element-margin);
+
+	> .image.fit {
+		margin-bottom: 0.5em;
+		img {
+			border-radius: 0;
+			border-bottom: _size(border-width) solid darken(_palette(bg), 20%);
+		}
+	}
+
+	> p {
+		padding-left: 1em;
+		margin-bottom: 0;
+	}
+}
