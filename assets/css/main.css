@@ -1917,7 +1917,7 @@ button,
 .twitter-feed {
   border-left: 1px solid #cccccc;
   max-height: 100%;
-  overflow: hidden; }
+  overflow: auto; }
   @media screen and (max-width: 980px) {
     .twitter-feed {
       clear: none; } }
