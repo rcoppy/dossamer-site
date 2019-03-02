@@ -1,6 +1,10 @@
 .twitter-feed {
 	border-left: _size(border-width) solid darken(_palette(bg), 20%);
 
+	max-height: 100%;
+
+	overflow: hidden;
+
 	@include breakpoint(medium) {
 		clear: none;
 	}

@@ -18,6 +18,10 @@ $(document).ready(function() {
 
     });
 
+    var maxFeedHeight = $('.main-container').outerHeight();
+
+    $('.twitter-feed').css("max-height", maxFeedHeight);
+
 	$('.slider').slick({
 	    autoplay: true,
 	    dots: true,
